@@ -1,0 +1,19 @@
+# Ilie David 5SAS 2024-2025
+
+Contract interactions:
+In the first place, I needed to do a transaction to getYourNftCardProperties
+to get the properties for the nft creation. It was a normal transaction which
+I signed it with my private key.
+To create the nft, I used a "ESDTNFTCreate" transaction where I introduced all
+the fileds needed to properly create it.
+After that, I used the "nftSupply" view from the contract to get all the nfts
+and parse them to find the one I am supposed to trade with.
+I managed to parse the data by using a decode_data function, which gets the
+information by getting the bytes in the correct order.
+For the exchange of the nfts, I called "exchangeNft" endpoint from the contract
+with the argument being the nonce of the nft I wanted, and the nft that I had
+was in the token_transfers field.
+
+The challenge that I faced was that the documentation isn't enough for
+completing the task and I needed to read the functions from the python sdk to
+manage to finish the assignment.
